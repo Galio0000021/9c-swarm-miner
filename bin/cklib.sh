@@ -185,11 +185,11 @@ function checkCores() {
     minerLimit=$(echo "$minerLimitDec" | awk '{print ($0-int($0)>0)?int($0)+1:int($0)}')
 
     if [[ $NC_MINERS -ge "2" && $CORES -ge "2" || $CORES -le "4" ]]; then
-        NC_MINERS=1
+        NC_MINERS=5
     elif [[ $NC_MINERS -ge "3" && $CORES -ge "5" || $CORES -le "8" ]]; then
-        NC_MINERS=2
+        NC_MINERS=5
     elif [[ $NC_MINERS -ge "4" && $CORES -ge "9" || $CORES -le "12" ]]; then
-        NC_MINERS=3
+        NC_MINERS=5
     elif [[ $NC_MINERS -ge "5" && $CORES -ge "13" || $CORES -le "16" ]]; then
         NC_MINERS=5
     elif [[ $NC_MINERS -ge "6" && $CORES -ge "17" ]]; then

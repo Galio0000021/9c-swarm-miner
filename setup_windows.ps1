@@ -211,7 +211,7 @@ function Select-Distro () {
 # Function: Install Distro
 function Install-Distro ($distro) {
     function Import-WSL ($distro) {
-        $distroinstall = "$env:LOCALAPPDATA\lxss"
+        $distroinstall = "$env:F:/Linux/"
         $wslname = $($distro.Name).Replace(" ", "-")
         $Filename = $wslname + ".rootfs.tar.gz"
         Write-Host("   --Downloading " + $distro.Name + ".")

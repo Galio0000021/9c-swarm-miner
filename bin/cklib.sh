@@ -207,7 +207,6 @@ function checkCores() {
 function checkSettings() {
     if [ -f "settings.conf" ]; then
         source settings.conf
-        checkCores
     else
         sAction "Please run setup! Then re-run this script"
         exit 1

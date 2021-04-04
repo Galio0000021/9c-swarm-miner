@@ -185,7 +185,7 @@ function checkCores() {
     minerLimit=$(echo "$minerLimitDec" | awk '{print ($0-int($0)>0)?int($0)+1:int($0)}')
 
     if [[ $CORES -le "4" ]]; then
-        MAX_MINERS=1
+        MAX_MINERS=5
     elif [[ $CORES -le "8" ]]; then
         MAX_MINERS=2
     elif [[ $CORES -le "12" ]]; then
